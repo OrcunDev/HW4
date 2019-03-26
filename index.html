@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+    
+function main(){
+            var i=0;
+    		for(i; i< 10; i++){
+        		Length = i + 2;
+        		Width =  i + 3;
+	            Height = i + 4;
+        		x = GetVolume(Length, Width, Height);
+            
+            switch(true) {
+  						
+                        case (x<500):
+               document.writeln("Small Volume: " + x + "<br>");
+                      break;
+  						case (x<1000):
+              	document.writeln("Medium Volume: " + x + "<br>");
+    				  break;
+                         case (x<1500):
+              	document.writeln("Large Volume: " + x +"<br>");
+                        break;
+                         case (1500<x):
+              	document.writeln(" Extra Large Volume: " + x +"<br>");
+                        break;
+              default:
+              }
+        } 
+}
+
+function GetVolume(Length, Width, Height) {
+    result = Length * Width * Height
+    return result;
+}   
+
+main();
+</script>
+
+</body>
+</html>
